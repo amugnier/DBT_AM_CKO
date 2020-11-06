@@ -1,0 +1,20 @@
+
+version: 2
+
+models:
+    - name: pageviews_extract
+      description: "pageviews_extract from data source"
+      columns:
+          - name: user_id
+            description: "Customer_key can't be null"
+            tests:
+                - not_null
+
+    - name: users_extract
+      description: "users_extract from data source"
+      columns:
+          - name: id
+            description: "Customer_key can't be null"
+            tests:
+                - unique
+                - not_null
